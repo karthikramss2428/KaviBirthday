@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday, Kaviya</title>
+  <title>ജന്മദിനാശംസകൾ, കവിയാ 🎆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -151,36 +151,13 @@
       opacity: 0.8;
     }
 
-    .translate-wrapper {
-      position: fixed;
-      top: 8px;
-      right: 10px;
-      z-index: 9999;
-    }
-
-    #google_translate_element {
-      font-size: 11px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 3px 6px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 120, 160, 0.9);
-      color: #333;
-    }
-
-    #google_translate_element select {
-      border: none;
-      background: transparent;
-      font-size: 11px;
-      padding: 0;
-      outline: none;
-    }
-
     @media (max-width: 600px) {
-      .translate-wrapper {
-        top: 6px;
-        right: 6px;
-        transform: scale(0.9);
-        transform-origin: top right;
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .subtitle {
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -191,30 +168,26 @@
   <div id="fireworks-container"></div>
   <canvas id="heartCanvas"></canvas>
 
-  <div class="translate-wrapper">
-    <div id="google_translate_element"></div>
-  </div>
-
   <div class="content">
     <div class="pill">
-      <span>Birthday celebration</span> <span>•</span>
-      <span>Fireworks</span> <span>•</span>
-      <span>Love</span>
+      <span>ജന്മദിനാഘോഷം</span> <span>•</span>
+      <span>പടക്കങ്ങൾ</span> <span>•</span>
+      <span>സ്നേഹം 💗</span>
     </div>
 
-    <h1>Happy Birthday, Kaviya</h1>
+    <h1>ജന്മദിനാശംസകൾ, കവിയാ 🎆</h1>
 
     <p class="subtitle">
-      Real crackers paint the night sky. Tap the button to launch one rocket from the bottom
-      that explodes into a glowing heart just for you.
+      യഥാർത്ഥ പടക്കങ്ങൾ രാത്രി ആകാശത്തെ വർണ്ണിക്കുന്നു. നിനക്കായി താഴെ നിന്ന് ഒരു റോക്കറ്റ് വിക്ഷേപിച്ച്
+      തിളങ്ങുന്ന ഹൃദയമായി പൊട്ടിത്തെറിക്കാൻ ബട്ടൺ അമർത്തൂ. ✨
     </p>
 
-    <button class="btn-trigger" id="heartBtn">Tap for rocket heart cracker</button>
+    <button class="btn-trigger" id="heartBtn">റോക്കറ്റ് ഹാർട്ട് പടക്കത്തിനായി അമർത്തൂ 🚀💖</button>
     <br>
-    <button class="btn-next" onclick="goNextPage()">Continue to the next surprise</button>
+    <button class="btn-next" onclick="goNextPage()">അടുത്ത ആശ്ചര്യത്തിലേക്ക് പോകുക 🎁</button>
 
     <div class="bottom-note">
-      Best viewed in full screen on mobile or desktop.
+      മൊബൈലിലോ ഡെസ്ക്ടോപ്പിലോ ഫുൾ സ്ക്രീനിൽ കാണുന്നതാണ് ഏറ്റവും മികച്ചത്. 📱💻
     </div>
   </div>
 
@@ -361,18 +334,5 @@
       window.location.href = 'next.html';
     }
   </script>
-
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ml',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
