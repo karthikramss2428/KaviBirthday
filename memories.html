@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
   <meta charset="UTF-8">
-  <title>Our Memories</title>
+  <title>നമ്മുടെ ഓർമ്മകൾ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,18 +21,13 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       padding: 12px;
       background:
         radial-gradient(circle at 10% 20%, rgba(255, 203, 219, 0.9) 0, rgba(255, 203, 219, 0) 40%),
         radial-gradient(circle at 90% 80%, rgba(186, 230, 255, 0.9) 0, rgba(186, 230, 255, 0) 40%),
         linear-gradient(145deg, #120022 0%, #3b0b5a 40%, #ff4b8b 100%);
       color: #fff;
-      position: relative;
-      overflow-y: auto;              /* allow full-page scroll */
-      overflow-x: hidden;
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
 
@@ -69,8 +64,7 @@
     .outer-shell {
       width: 100%;
       max-width: 900px;
-      max-height: 95vh;
-      margin: auto;
+      margin: 0 auto 16px auto;
       background: rgba(255, 255, 255, 0.10);
       border-radius: 24px;
       border: 1px solid rgba(255, 255, 255, 0.55);
@@ -83,30 +77,6 @@
       flex-direction: column;
       gap: 8px;
       z-index: 1;
-    }
-
-    .translate-wrapper {
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      z-index: 2;
-    }
-
-    #google_translate_element {
-      font-size: 11px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 3px 6px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 120, 160, 0.9);
-      color: #333;
-    }
-
-    #google_translate_element select {
-      border: none;
-      background: transparent;
-      font-size: 11px;
-      padding: 0;
-      outline: none;
     }
 
     header {
@@ -126,11 +96,7 @@
     }
 
     main.page-content {
-      flex: 1;
-      overflow-y: auto;
-      padding-right: 4px;
       margin-top: 4px;
-      -webkit-overflow-scrolling: touch;
     }
 
     .outer-card {
@@ -145,6 +111,7 @@
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.10));
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       padding: 11px 16px 12px;
       text-align: left;
     }
@@ -211,31 +178,7 @@
       white-space: nowrap;
     }
 
-    /* mobile: let card grow so translated text + buttons fit */
-    @media (max-width: 768px) {
-      body {
-        display: block;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 20px 12px;
-      }
-
-      .outer-shell {
-        max-height: none;
-        min-height: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-    }
-
     @media (max-width: 575.98px) {
-      .translate-wrapper {
-        top: 6px;
-        right: 6px;
-        transform: scale(0.9);
-        transform-origin: top right;
-      }
-
       header {
         padding-top: 40px;
       }
@@ -279,13 +222,9 @@
   <div id="floating-hearts-container" class="floating-hearts-container"></div>
 
   <div class="outer-shell">
-    <div class="translate-wrapper">
-      <div id="google_translate_element"></div>
-    </div>
-
     <header>
-      <h1>Our Little Memories</h1>
-      <p>Just a few of the million moments that made the world softer, brighter, and more “us”.</p>
+      <h1>നമ്മുടെ ചെറിയ ഓർമ്മകൾ</h1>
+      <p>ലോകത്തെ മൃദുവും പ്രകാശമുള്ളതുമാക്കി നമ്മളായ 만든 ചില ദിവസങ്ങളുടെ ചെറു പട്ടിക മാത്രം.</p>
     </header>
 
     <main class="page-content">
@@ -295,21 +234,21 @@
           <div class="row g-2 align-items-center">
             <div class="col-12 col-sm-auto d-flex justify-content-start justify-content-sm-start">
               <div class="memory-image-square">
-                <img src="img1.jpg" alt="First memory">
+                <img src="img1.jpg" alt="ആദ്യ ഓർമ്മ">
               </div>
             </div>
             <div class="col-12 col-sm">
               <div class="memory-pill">
                 <div class="d-flex justify-content-between align-items-baseline mb-1">
-                  <div class="memory-title">First Call / Message</div>
+                  <div class="memory-title">ആദ്യ ഫോൺ വിളി / മെസേജ്</div>
                   <div class="memory-meta d-none d-sm-block">05‑01‑2025</div>
                 </div>
                 <p class="memory-text mb-1">
-                  Unforgettable memories started on this day. The one girl found who understands all the little things.
-                  It felt like a replica of this heart’s care was living inside you.
-                  The most beautiful soul quietly walked into this life.
+                  ഈ ദിവസത്തോടെയാണ് മറക്കാനാകാത്ത ഓർമ്മകൾ തുടങ്ങിയത്.
+                  ഹൃദയം ഉള്ളിലെ ചെറിയ കാര്യങ്ങൾ പോലും മനസിലാക്കുന്ന ഒരാൾ ഇത്രയുണർന്നാണ് ആദ്യമായി കിട്ടുന്നത്.
+                  ഈ ഹൃദയത്തിന്റെ കരുതലിന്റെ ഒരു പകർപ്പുപോലെ നീ ഈ ജീവിതത്തിലേക്ക് നിസ്സാരമായി നടന്നെത്തിയ ദിനം.
                 </p>
-                <span class="tag">Beginning</span>
+                <span class="tag">ആരംഭം</span>
               </div>
             </div>
           </div>
@@ -321,18 +260,20 @@
             <div class="col-12 col-sm order-1 order-sm-1">
               <div class="memory-pill">
                 <div class="d-flex justify-content-between align-items-baseline mb-1">
-                  <div class="memory-title">Best Friends</div>
+                  <div class="memory-title">എന്നുമുള്ള നല്ല സുഹൃത്തുകൾ</div>
                 </div>
                 <p class="memory-text mb-1">
-                  The bond became closer and closer. Sharing everything started to feel natural.
-                  The way you cared made things so comfortable that strangers slowly became best friends.
+                  ദിവസങ്ങൾ കഴിയുംതോറും ബന്ധം കൂടുതൽ അടുത്തതും സ്വാഭാവികവുമാവുകയായിരുന്നു.
+                  എന്തും പങ്കുവയ്ക്കുന്നത് പതിവായി മാറി.
+                  നീ കാണിച്ച കരുതലും സ്‌നേഹവും എല്ലാം ചേർന്നു, അന്യർ ആയിരുന്നതിനിന്ന്
+                  धीरे धीरे ഏറ്റവും പ്രിയപ്പെട്ട സുഹൃത്തുകളായി മാറി.
                 </p>
-                <span class="tag">Talking nonstop</span>
+                <span class="tag">നില്ക്കാതെ സംസാരിക്കൽ</span>
               </div>
             </div>
             <div class="col-12 col-sm-auto order-0 order-sm-2 d-flex justify-content-start justify-content-sm-end">
               <div class="memory-image-square">
-                <img src="img2.jpg" alt="Best friends memory">
+                <img src="img2.jpg" alt="സുഹൃത്തായ ഓർമ്മ">
               </div>
             </div>
           </div>
@@ -343,20 +284,21 @@
           <div class="row g-2 align-items-center">
             <div class="col-12 col-sm-auto d-flex justify-content-start">
               <div class="memory-image-square">
-                <img src="img3.jpg" alt="Proposal memory">
+                <img src="img3.jpg" alt="പ്രൊപ്പോസൽ ദിനം">
               </div>
             </div>
             <div class="col-12 col-sm">
               <div class="memory-pill">
                 <div class="d-flex justify-content-between align-items-baseline mb-1">
-                  <div class="memory-title">The Proposal Day</div>
+                  <div class="memory-title">പ്രൊപ്പോസ് ചെയ്ത ദിവസം</div>
                 </div>
                 <p class="memory-text mb-1">
-                  There was a silent fight between heart and brain.
-                  Life was heavy and it felt like someone was really needed.
-                  In that moment, you looked perfect, and the choice was to walk with you for the rest of this life.
+                  ആ സമയത്ത് ഹൃദയത്തിന്റെയും ബുദ്ധിയുടെയും ഉള്ളിൽ ഒരു മിണ്ടാത്ത പോരാട്ടമായിരുന്നു.
+                  ജീവിതം ഭാരമായിരുന്നു, ഒപ്പം ഒപ്പം പോകാൻ ആരെങ്കിലും അത്യാവശ്യമായി തോന്നിയിരുന്നു.
+                  അപ്പോൾ നിന്നെ നോക്കുമ്പോൾ ഒരു പൂർണ്ണത പോലെ തോന്നി; ജീവിതം മുഴുവൻ ഒപ്പം നടക്കാനുള്ള
+                  ഒരേയൊരു തിരഞ്ഞെടുപ്പ് നീയായിരുന്നു.
                 </p>
-                <span class="tag">Favourite smile</span>
+                <span class="tag">പ്രിയപ്പെട്ട പുഞ്ചിരി</span>
               </div>
             </div>
           </div>
@@ -368,19 +310,21 @@
             <div class="col-12 col-sm order-1 order-sm-1">
               <div class="memory-pill">
                 <div class="d-flex justify-content-between align-items-baseline mb-1">
-                  <div class="memory-title">Our Fights</div>
+                  <div class="memory-title">നമ്മുടെ വഴക്ക്‌കൾ</div>
                 </div>
                 <p class="memory-text mb-1">
-                  There were arguments like anything, and then make‑ups like soulmates.
-                  Those moments showed how empty it would feel without you.
-                  Even in every fight, there is only one fear: never wanting to lose you.
+                  ചിലപ്പോൾ വാക്കുകൾ കടുപ്പമായിരുന്നു, വഴക്ക്‌കൾ കഠിനമായിരുന്നു,
+                  പക്ഷേ ഓരോ വഴക്കും കഴിഞ്ഞ് ആത്മാർത്ഥമായ ചേർത്ത് പിടിക്കലിലൂടെ എല്ലാം മൃദുവായി.
+                  നിന്നില്ലാതെ എത്ര ശൂന്യമായിരിക്കും ഈ ജീവിതം എന്ന് ആ നിമിഷങ്ങൾ തന്നെയാണ്
+                  ഏറ്റവും തുറന്ന് കാണിച്ചത്.
+                  ഏത് വഴക്കായാലും ഉള്ളിലെ ഒരു ഭയം മാത്രം: നിന്നെ ഒരിക്കലും നഷ്ടപ്പെടുത്താൻ മനസ്സില്ല.
                 </p>
-                <span class="tag">Stronger together</span>
+                <span class="tag">ഒന്നിച്ച് കൂടുതൽ ശക്തം</span>
               </div>
             </div>
             <div class="col-12 col-sm-auto order-0 order-sm-2 d-flex justify-content-start justify-content-sm-end">
               <div class="memory-image-square">
-                <img src="img4.jpg" alt="Fight memory">
+                <img src="img4.jpg" alt="വഴക്ക് ഓർമ്മ">
               </div>
             </div>
           </div>
@@ -391,35 +335,38 @@
           <div class="row g-2 align-items-center">
             <div class="col-12 col-sm-auto d-flex justify-content-start">
               <div class="memory-image-square">
-                <img src="img5.jpg" alt="Today memory">
+                <img src="img5.jpg" alt="ഇന്നത്തെ ഓർമ്മ">
               </div>
             </div>
             <div class="col-12 col-sm">
               <div class="memory-pill">
                 <div class="d-flex justify-content-between align-items-baseline mb-1">
-                  <div class="memory-title">This moment, right now</div>
-                  <div class="memory-meta d-none d-sm-block">Today, with this page</div>
+                  <div class="memory-title">ഇപ്പോൾ, ഈ നിമിഷം</div>
+                  <div class="memory-meta d-none d-sm-block">ഇന്ന്, ഈ പേജിനൊപ്പം</div>
                 </div>
                 <p class="memory-text mb-1">
-                  If you are reading this, it means so many beautiful days are already shared.
-                  You are lifeline, wonder, and everything in between.
-                  There is only one simple wish: to keep you close, forever.
+                  നീ ഇത് വായിച്ചുകൊണ്ടിരിക്കുകയാണെങ്കിൽ, ഇതിനുമുമ്പ് നമ്മൾ ഇതിനകം
+                  എത്ര മനോഹരമായ ദിവസങ്ങൾ പങ്കുവച്ചിരിക്കുന്നു എന്നതിന്റെ അടയാളമാണ് അത്.
+                  നീയാണ് ഈ ഹൃദയത്തിന്റെ ലൈഫ്‌ലൈൻ, അത്ഭുതം, എല്ലാം.
+                  ഒരു ലളിതമായ ആഗ്രഹം മാത്രം: ഇങ്ങനെ തന്നെ നിന്നെ അടുത്ത് ചേർത്ത്
+                  ജീവിതം മുഴുവൻ മുന്നോട്ട് പോകാൻ.
                 </p>
-                <span class="tag">To be continued…</span>
+                <span class="tag">ഇതോടെ തുടങ്ങുന്നു…</span>
               </div>
             </div>
           </div>
         </div>
 
         <p class="small text-center mt-3 opacity-75">
-          This is only the beginning, Kaviya. There is a wish for a lifetime of pages like this with you. 💗
+          ഇതെല്ലാം മാത്രം തുടക്കമാണ്, കവിയായാ. ഇങ്ങനെ ഉള്ള പേജുകൾ നിന്‍റെ കൂടെ ജീവിതം മുഴുവൻ എഴുതാൻ
+          ഈ ഹൃദയം ആഗ്രഹിക്കുന്നു. 💗
         </p>
       </div>
     </main>
 
     <div class="bottom-bar">
-      <button class="btn btn-outline-light nav-btn" onclick="goBack()">Back to message</button>
-      <button class="btn btn-light text-danger nav-btn" onclick="goNext()">Go to cards</button>
+      <button class="btn btn-outline-light nav-btn" onclick="goBack()">സന്ദേശ പേജിലേക്ക് മടങ്ങുക</button>
+      <button class="btn btn-light text-danger nav-btn" onclick="goNext()">കാർഡുകളിലേക്ക് പോകുക</button>
     </div>
   </div>
 
@@ -448,7 +395,6 @@
       heart.style.filter = 'drop-shadow(0 0 6px rgba(0,0,0,0.4))';
 
       heartsContainer3.appendChild(heart);
-
       setTimeout(() => heart.remove(), duration + 500);
     }
 
@@ -462,18 +408,5 @@
       window.location.href = 'cards.html';
     }
   </script>
-
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ml',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
